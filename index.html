@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>叫叫小分队点球大战</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas" tabindex="0"></canvas>
+      <section class="hud hud-status" aria-live="polite">
+        <div class="hud-title">叫叫小分队点球大战</div>
+        <div id="load-status">正在初始化...</div>
+        <div id="animation-status">动作：等待人物加载</div>
+        <div id="input-status">输入：等待操作</div>
+      </section>
+      <section class="scoreboard" aria-live="polite">
+        <div id="score-round" class="score-round">第 1/5 轮</div>
+        <div class="score-row">
+          <div class="team-name">铃铛</div>
+          <div id="score-left" class="score-number">0</div>
+          <div class="score-divider">:</div>
+          <div id="score-right" class="score-number">0</div>
+          <div class="team-name">猪小弟</div>
+        </div>
+      </section>
+      <section class="hud hud-controls">
+        <div>左屏 铃铛：WASD 移动，按住 Space 蓄力</div>
+        <div>蓄力时：A/D 调左右，W/S 调高低，松开射门</div>
+        <div>右屏 猪小弟：方向键或 IJKL 移动，Enter 扑救，R 重开</div>
+      </section>
+      <div class="split-line" aria-hidden="true"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
