@@ -33,10 +33,16 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Keep HTML on GitHub Pages
+        run: |
+          mkdir -p pages
+          cp dist/index.html pages/index.html
+          touch pages/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: pages
 
   deploy:
     environment:

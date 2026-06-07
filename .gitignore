@@ -1,3 +1,7 @@
 node_modules/
 .env
 .DS_Store
+dist/*
+!dist/
+!dist/.nojekyll
+!dist/index.html

@@ -3,8 +3,9 @@ import "./styles.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-const shooterUrl = new URL("../assets/铃铛.glb", import.meta.url).href;
-const keeperUrl = new URL("../assets/猪小弟.glb", import.meta.url).href;
+const OSS_ASSET_BASE = "https://xc-public.oss-cn-chengdu.aliyuncs.com/assets/assets/";
+const shooterUrl = `${OSS_ASSET_BASE}%E9%93%83%E9%93%9B-CG-kDcnl.glb`;
+const keeperUrl = `${OSS_ASSET_BASE}%E7%8C%AA%E5%B0%8F%E5%BC%9F-BTeDCkvq.glb`;
 
 const canvas = document.querySelector("#game-canvas");
 const loadStatus = document.querySelector("#load-status");
